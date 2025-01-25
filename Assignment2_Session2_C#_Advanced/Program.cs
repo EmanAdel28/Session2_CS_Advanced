@@ -136,6 +136,57 @@ namespace Assignment2_Session2_C__Advanced
             //}
             #endregion
 
+            #region Q2
+            //2. Given a number N and an array of N numbers. Determine if it's palindrome or not.
+            //int N;
+            //bool Flags;
+            //bool Palindrome = true;
+
+            //do
+            //{
+            //    Console.WriteLine("Enter The Size Of Array");
+            //    Flags = int.TryParse(Console.ReadLine(), out N);
+            //}while (!Flags || N <= 0);
+
+            //int[] array = new int[N];
+
+            //Console.WriteLine("Enter Elements of Array");
+            //for (int i = 0; i < N; i++)
+            //{
+            //    Console.WriteLine($"Enter Element {i + 1} ");
+
+            //    int elements;
+            //    do
+            //    {
+            //        Flags = int.TryParse(Console.ReadLine(), out elements);
+
+            //    } while (!Flags);
+            //    array[i] = elements;
+            //}
+
+            //for ( int i = 0; i< N; i++)
+            //{
+            //    if (array[i] != array[N - i - 1])
+            //    {
+            //        Palindrome = false;
+            //        break;
+            //    }
+
+            //}
+
+            //if(Palindrome)
+            //{
+            //    Console.WriteLine("Array is Palindrome");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Array is Not Palindrome");
+
+            //}
+
+
+            #endregion
+
         }
     }
     }
