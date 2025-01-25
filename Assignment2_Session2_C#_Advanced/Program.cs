@@ -346,7 +346,7 @@ namespace Assignment2_Session2_C__Advanced
 
             //} while (!Flags || Size <= 0);
 
-          
+
 
             //ArrayList array = new ArrayList(Size);
 
@@ -373,6 +373,18 @@ namespace Assignment2_Session2_C__Advanced
             //{
             //    Console.WriteLine(element);
             //}
+            #endregion
+
+            #region Q7
+            //7. Implement a queue that can hold different data types. And insert the following data:
+            //queue.Enqueue(1)
+            //queue.Enqueue(“Apple”)
+            //queue.Enqueue(5.28)
+
+            //Queue queue = new Queue();
+            //queue.Enqueue(1);
+            //queue.Enqueue("Apple");
+            //queue.Enqueue(5.28);
             #endregion
 
         }
