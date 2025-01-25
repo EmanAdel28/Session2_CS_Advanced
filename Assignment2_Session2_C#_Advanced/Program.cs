@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Xml.Linq;
 
 namespace Assignment2_Session2_C__Advanced
@@ -55,6 +57,19 @@ namespace Assignment2_Session2_C__Advanced
                 }
             }
             return stack.Count == 0;
+        }
+
+        public static  int[] RemoveDuplication(int[]array)
+        {
+           List<int> list = new List<int>();
+            
+
+            foreach (int element in array)
+            {
+                if (!list.Contains(element))
+                    list.Add(element);
+            }
+            return list.ToArray();
         }
         static void Main(string[] args)
         {
@@ -265,10 +280,48 @@ namespace Assignment2_Session2_C__Advanced
             #region Q4
             //4. Given a Stack, implement a function to check if a string of parentheses is balanced using a stack.
 
-            string input = Console.ReadLine();
-            bool isBalanced = IsBalanced(input);
-            Console.WriteLine(isBalanced ? "Balanced" : "Unbalanced");
+            //string input = Console.ReadLine();
+            //bool isBalanced = IsBalanced(input);
+            //Console.WriteLine(isBalanced ? "Balanced" : "Unbalanced");
 
+            #endregion
+
+            #region Q5
+            //5. Given an array, implement a function to remove duplicate elements from an array.
+
+            bool Flags;
+            int Size ;
+
+            do
+            {
+                Console.WriteLine("Enter Size Of Array");
+                Flags = int.TryParse(Console.ReadLine(), out Size);
+
+            } while (!Flags || Size <= 0);
+
+          
+
+            int[] array = new int[Size];
+
+            Console.WriteLine("Enter Elements of Array");
+            for (int i = 0; i < Size; i++)
+            {
+                Console.WriteLine($"Enter Element {i + 1} ");
+
+                int elements;
+                do
+                {
+                    Flags = int.TryParse(Console.ReadLine(), out elements);
+
+                } while (!Flags);
+                array[i] = elements;
+            }
+            int[] uniqueArray = RemoveDuplication(array);
+            Console.WriteLine("Array After Removing Dublication");
+            foreach (int element in uniqueArray)
+            {
+                Console.WriteLine(element);
+            }
             #endregion
 
         }
