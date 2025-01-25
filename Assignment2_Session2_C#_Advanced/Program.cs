@@ -1,9 +1,23 @@
-﻿using System.Xml.Linq;
+﻿using System.Collections;
+using System.Xml.Linq;
 
 namespace Assignment2_Session2_C__Advanced
 {
     internal class Program
     {
+        public static void ReseveElements(Queue<int> queue)
+        {
+            Stack<int> stack = new Stack<int>();
+
+            while(queue.Count > 0)
+                stack.Push(queue.Dequeue());
+        
+            
+            while (stack.Count > 0)
+                queue.Enqueue(stack.Pop());
+           
+
+        }
         static void Main(string[] args)
         {
 
@@ -185,6 +199,29 @@ namespace Assignment2_Session2_C__Advanced
             //}
 
 
+            #endregion
+
+            #region Q3
+            //3. Given a Queue, implement a function to reverse the elements of a queue using a stack.
+
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+
+            //Console.WriteLine("Queue Before Reseved");
+            //foreach (int i in queue)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            //ReseveElements(queue);
+            //Console.WriteLine("Queue After Reseved");
+
+            //foreach (int i in queue)
+            //{
+            //    Console.WriteLine(i);
+            //}
             #endregion
 
         }
