@@ -71,6 +71,16 @@ namespace Assignment2_Session2_C__Advanced
             }
             return list.ToArray();
         }
+
+        public static ArrayList RemoveOddNumber(ArrayList arraylist)
+        {
+           for(int i = 0;i<arraylist.Count; i++)
+            {
+                if ((int)arraylist[i] % 2 != 0)
+                    arraylist.RemoveAt(i);
+            }
+            return arraylist;   
+        }
         static void Main(string[] args)
         {
 
@@ -289,39 +299,80 @@ namespace Assignment2_Session2_C__Advanced
             #region Q5
             //5. Given an array, implement a function to remove duplicate elements from an array.
 
-            bool Flags;
-            int Size ;
+            //bool Flags;
+            //int Size ;
 
-            do
-            {
-                Console.WriteLine("Enter Size Of Array");
-                Flags = int.TryParse(Console.ReadLine(), out Size);
+            //do
+            //{
+            //    Console.WriteLine("Enter Size Of Array");
+            //    Flags = int.TryParse(Console.ReadLine(), out Size);
 
-            } while (!Flags || Size <= 0);
+            //} while (!Flags || Size <= 0);
+
+
+
+            //int[] array = new int[Size];
+
+            //Console.WriteLine("Enter Elements of Array");
+            //for (int i = 0; i < Size; i++)
+            //{
+            //    Console.WriteLine($"Enter Element {i + 1} ");
+
+            //    int elements;
+            //    do
+            //    {
+            //        Flags = int.TryParse(Console.ReadLine(), out elements);
+
+            //    } while (!Flags);
+            //    array[i] = elements;
+            //}
+            //int[] uniqueArray = RemoveDuplication(array);
+            //Console.WriteLine("Array After Removing Dublication");
+            //foreach (int element in uniqueArray)
+            //{
+            //    Console.WriteLine(element);
+            //}
+            #endregion
+
+            #region Q6
+            //6. Given an array list , implement a function to remove all odd numbers from it.
+            //bool Flags;
+            //int Size;
+
+            //do
+            //{
+            //    Console.WriteLine("Enter Size Of Array");
+            //    Flags = int.TryParse(Console.ReadLine(), out Size);
+
+            //} while (!Flags || Size <= 0);
 
           
 
-            int[] array = new int[Size];
+            //ArrayList array = new ArrayList(Size);
 
-            Console.WriteLine("Enter Elements of Array");
-            for (int i = 0; i < Size; i++)
-            {
-                Console.WriteLine($"Enter Element {i + 1} ");
+            //// Enter Elements of Array
 
-                int elements;
-                do
-                {
-                    Flags = int.TryParse(Console.ReadLine(), out elements);
+            //Console.WriteLine("Enter Elements of Array");
+            //for (int i = 0; i < Size; i++)
+            //{
+            //    Console.WriteLine($"Enter Element {i + 1} ");
 
-                } while (!Flags);
-                array[i] = elements;
-            }
-            int[] uniqueArray = RemoveDuplication(array);
-            Console.WriteLine("Array After Removing Dublication");
-            foreach (int element in uniqueArray)
-            {
-                Console.WriteLine(element);
-            }
+            //    int elements;
+            //    do
+            //    {
+            //        Flags = int.TryParse(Console.ReadLine(), out elements);
+
+            //    } while (!Flags);
+            //    array.Add(elements);
+            //}
+
+            //RemoveOddNumber(array);
+
+            //Console.WriteLine("Array Whihout Odd Numbers");
+            //foreach (int element in array)
+            //{
+            //    Console.WriteLine(element);
+            //}
             #endregion
 
         }
