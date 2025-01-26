@@ -82,6 +82,13 @@ namespace Assignment2_Session2_C__Advanced
             return arraylist;   
         }
 
+        static void PushIntegersOntoStack(Stack<int> stack, int[] integers)
+        {
+            foreach (int number in integers)
+            {
+                stack.Push(number); // Push each integer onto the stack
+            }
+        }
         public static void SearchForATargetIntegerInTheStack(Stack<int> stack, int target)
         {
 
@@ -428,11 +435,7 @@ namespace Assignment2_Session2_C__Advanced
             //If the target is not found, print a message indicating that the target was not found(“Target was not found”).
 
             //Stack<int> stack = new Stack<int>();
-            //stack.Push(0);
-            //stack.Push(1);
-            //stack.Push(2);
-            //stack.Push(3);
-            //stack.Push(4);
+            //PushIntegersOntoStack(stack, new[] { 1, 2, 3, 4, 5 });
 
             //bool Flags;
             //int target;
@@ -443,7 +446,11 @@ namespace Assignment2_Session2_C__Advanced
 
             //} while (!Flags);
 
-            //SearchForATargetIntegerInTheStack(stack , target);
+            //SearchForATargetIntegerInTheStack(stack, target);
+            #endregion
+
+            #region Q9
+            // 9.Given two arrays, find their intersection. Each element in the result should appear as many times as it shows in both arrays.
             #endregion
 
         }
