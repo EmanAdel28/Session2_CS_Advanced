@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Xml.Linq;
+using Microsoft.VisualBasic;
 
 namespace Assignment2_Session2_C__Advanced
 {
@@ -451,6 +452,88 @@ namespace Assignment2_Session2_C__Advanced
 
             #region Q9
             // 9.Given two arrays, find their intersection. Each element in the result should appear as many times as it shows in both arrays.
+
+            //bool Flags;
+            //int Size1, Size2;
+
+            //do
+            //{
+            //    Console.WriteLine("Enter Size Of Array 1");
+            //    Flags = int.TryParse(Console.ReadLine(), out Size1);
+
+            //} while (!Flags || Size1 <= 0);
+
+            //do
+            //{
+            //    Console.WriteLine("Enter Size Of Array 2");
+            //    Flags = int.TryParse(Console.ReadLine(), out Size2);
+
+            //} while (!Flags || Size2 <= 0);
+
+
+            //Console.WriteLine("Enter the elements of the Array 1");
+
+            //int[] array1 = new int[Size1];
+
+            //Console.WriteLine("Enter Elements of Array");
+            //for (int i = 0; i < Size1; i++)
+            //{
+            //    Console.WriteLine($"Enter Element {i + 1} ");
+
+            //    int elements;
+            //    do
+            //    {
+            //        Flags = int.TryParse(Console.ReadLine(), out elements);
+
+
+            //    } while (!Flags);
+            //    array1[i] = elements;
+            //}
+
+            //Console.WriteLine("Enter the elements of the Array 2");
+
+            //int[] array2 = new int[Size2];
+
+            //Console.WriteLine("Enter Elements of Array");
+            //for (int i = 0; i < Size2; i++)
+            //{
+            //    Console.WriteLine($"Enter Element {i + 1} ");
+
+            //    int elements;
+            //    do
+            //    {
+            //        Flags = int.TryParse(Console.ReadLine(), out elements);
+
+            //    } while (!Flags);
+            //    array2[i] = elements;
+            //}
+            //int k = 0;
+            //int l = 0;
+            //List<int> list = new List<int>();
+            //while (k < array1.Length && l < array2.Length)
+            //{
+            //    if (array1[k] == array2[l])
+            //    {
+            //        // If elements are equal, add them to the result list
+            //        list.Add(array1[k]);
+            //        k++;
+            //        l++;
+            //    }
+            //    else if (array1[k] < array2[l])
+            //    {
+            //        // Move pointer in array1
+            //        k++;
+            //    }
+            //    else
+            //    {
+            //        // Move pointer in array2
+            //        l++;
+            //    }
+            //}
+            //foreach (int items in list)
+            //{
+            //    Console.WriteLine(items);
+            //}
             #endregion
 
         }
