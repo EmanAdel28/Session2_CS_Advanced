@@ -121,6 +121,31 @@ namespace Assignment2_Session2_C__Advanced
                 Console.WriteLine("Target was not found");
 
         }
+
+
+        public static bool HasSublistWithTargetSum(List<int> list , int target)
+        {
+            int N = 0;
+            int CurrentSum = 0;
+         
+
+            for(int i = 0; i<list.Count; i++ )
+            {
+                CurrentSum += list[i];
+
+                while (CurrentSum > target && N <= i)
+                {
+                    CurrentSum -= list[N];
+                    N++;
+                }
+
+                if( CurrentSum == target)
+                {
+                    return true;
+                    
+                }
+            }return false;
+        }
         static void Main(string[] args)
         {
 
@@ -534,6 +559,19 @@ namespace Assignment2_Session2_C__Advanced
             //{
             //    Console.WriteLine(items);
             //}
+            #endregion
+
+            #region Q10
+            //10. Given an ArrayList of integers and a target sum, find if there is a contiguous sub list that sums up to the target
+            //List<int> arrayList = new List<int> { 1, 2, 3, 7, 5 };
+            //int target = 5;
+
+          
+            //bool result = HasSublistWithTargetSum(arrayList, target);
+
+         
+            //Console.WriteLine(result ? "Sublist found" : "Sublist not found");
+
             #endregion
 
         }
