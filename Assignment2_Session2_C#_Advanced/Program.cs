@@ -81,6 +81,38 @@ namespace Assignment2_Session2_C__Advanced
             }
             return arraylist;   
         }
+
+        public static void SearchForATargetIntegerInTheStack(Stack<int> stack, int target)
+        {
+
+            
+
+            Stack<int> stack2 = new Stack<int>(stack);
+            bool FoundTarget = true;
+            int count = 0;
+
+
+
+            while (stack2.Count > 0)
+            {
+                count++;
+                int current = stack2.Pop(); // Remove the top element of the stack
+
+                if (current == target)
+                {
+                    FoundTarget = true;
+                    break;
+                }
+            }
+
+
+            if (FoundTarget)
+            Console.WriteLine($"Target was found successfully and the count = {count}");
+            
+            else
+                Console.WriteLine("Target was not found");
+
+        }
         static void Main(string[] args)
         {
 
@@ -385,6 +417,33 @@ namespace Assignment2_Session2_C__Advanced
             //queue.Enqueue(1);
             //queue.Enqueue("Apple");
             //queue.Enqueue(5.28);
+
+            #endregion
+
+            #region Q8
+            //Create a function that pushes a series of integers onto a stack.
+            //Then, search for a target integer in the stack. If the target is found,
+            //print a message indicating that the target was found how many elements
+            //were checked before finding the target (“Target was found successfully and the count = 5”).
+            //If the target is not found, print a message indicating that the target was not found(“Target was not found”).
+
+            //Stack<int> stack = new Stack<int>();
+            //stack.Push(0);
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+
+            //bool Flags;
+            //int target;
+            //do
+            //{
+            //    Console.WriteLine("Enter Number");
+            //    Flags = int.TryParse(Console.ReadLine(), out target);
+
+            //} while (!Flags);
+
+            //SearchForATargetIntegerInTheStack(stack , target);
             #endregion
 
         }
