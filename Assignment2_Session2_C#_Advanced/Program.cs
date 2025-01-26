@@ -566,11 +566,56 @@ namespace Assignment2_Session2_C__Advanced
             //List<int> arrayList = new List<int> { 1, 2, 3, 7, 5 };
             //int target = 5;
 
-          
+
             //bool result = HasSublistWithTargetSum(arrayList, target);
 
-         
+
             //Console.WriteLine(result ? "Sublist found" : "Sublist not found");
+
+            #endregion
+
+            #region Q11
+            //11. Given a queue reverse first K elements of a queue, keeping the remaining elements in the same order 
+            Queue<int> queue = new Queue<int>() ;
+            queue.Enqueue(1) ;
+            queue.Enqueue(2) ;
+            queue.Enqueue(3) ;
+            queue.Enqueue(4) ;
+            queue.Enqueue(5) ;
+
+            Console.WriteLine("Original Queue");
+
+            foreach (int i in queue)
+            {
+
+                Console.WriteLine(i);
+            }
+
+            int K = 5;
+            Stack<int> stack = new Stack<int>();
+            for (int i = 0;i<K;i++)
+            {
+                stack.Push(queue.Dequeue()) ;
+            }
+
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+
+            int remaining = queue.Count;
+            for (int i = 0; i < remaining - K; i++)
+            {
+                queue.Enqueue(queue.Dequeue());
+            }
+
+            Console.WriteLine("Final Queue");
+
+            foreach (int i in queue)
+            {
+
+                Console.WriteLine(i);
+            }
 
             #endregion
 
